@@ -1,0 +1,69 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_img_normal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:contentDescription=""
+            android:text="普通url图片" />
+
+        <Button
+            android:id="@+id/btn_res_normal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:contentDescription=""
+            android:text="普通资源id图片" />
+
+        <Button
+            android:id="@+id/btn_img_down"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:contentDescription="表示只会下载图片，而不会对图片进行加载"
+            android:text="下载图片" />
+
+
+        <Button
+            android:id="@+id/btn_img_cache"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="缓存图片" />
+        `
+
+        <Button
+            android:id="@+id/btn_img_dis"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="展示图片" />
+
+        <Button
+            android:id="@+id/btn_img_progress"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="下载图片进度" />
+
+        <ImageView
+            android:id="@+id/glide_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="上面展示图片" />
+
+
+    </LinearLayout>
+
+</ScrollView>
