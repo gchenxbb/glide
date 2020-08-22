@@ -1,4 +1,4 @@
-package com.glide.app.image;
+package com.glide.app.config;
 
 import android.content.Context;
 import android.os.Environment;
@@ -9,12 +9,9 @@ import com.bumptech.glide.Registry;
 import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.load.engine.cache.ExternalCacheDiskCacheFactory;
 import com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory;
-import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.AppGlideModule;
 import com.bumptech.glide.request.target.ViewTarget;
 import com.glide.app.R;
-
-import java.io.InputStream;
 
 @GlideModule
 public class GlideModuleConfig extends AppGlideModule {
@@ -58,6 +55,7 @@ public class GlideModuleConfig extends AppGlideModule {
         //prepend将OkHttpFetcher放在HttpUrlFetcher前面，列表中取第0个执行，
         // 即OkHttpFetcher
         //glide.getRegistry().prepend(GlideUrl.class, InputStream.class, new OkHttpGlideUrlLoader.Factory());
+        // 替换组件交给三方库 okhttp3-integration
     }
 
     /**

@@ -1,8 +1,9 @@
-package com.glide.app;
+package com.glide.app.interceptor;
 
 
 
 import com.glide.app.interceptor.ProgressIntercepor;
+import com.glide.app.interceptor.ProgressListener;
 
 import java.io.IOException;
 

@@ -1,8 +1,5 @@
 package com.glide.app.interceptor;
 
-import com.glide.app.ProgressListener;
-import com.glide.app.ProgressResponseBody;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
