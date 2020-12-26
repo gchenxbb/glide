@@ -13,10 +13,12 @@ public class Constant {
 
     public static final String urlProgress = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1116313726,3874542020&fm=26&gp=0.jpg";
 
-
-    public static final String imgfile = "file://" + Environment.getExternalStorageDirectory().getPath() + "/IMG_20181129_104255.jpg";
+    //Glide加载类型
+    public static final String url = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3984473917,238095211&fm=26&gp=0.jpg";
+    //file:///storage/emulated/0/IMG_20201011_143239.jpg
+    public static final String imgfile = "file://" + Environment.getExternalStorageDirectory().getPath() + "/IMG_20201011_143239.jpg";
     public static final String imgasset = "file:///android_asset/img2.png";
     public static final int imgraw = R.raw.img3;
-    public static final int imgdrawable = R.drawable.img1;
+    public static final int imgresid = R.drawable.img1;
 
 }

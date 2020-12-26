@@ -15,7 +15,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
 /*
- * Glide demo
+ * AppCompatActivity 兼容性
  */
 public class GlideCompatActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = "GlideCompatActivity";

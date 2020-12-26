@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btn_img_display"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="left|center_vertical"
+        android:text="展示图片（带监听）"
+        android:textAllCaps="false" />
+
+    <ImageView
+        android:id="@+id/glide_image_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true" />
+
+    <Button
+        android:id="@+id/btn_img_gif"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="left|center_vertical"
+        android:text="展示图片（gif）"
+        android:textAllCaps="false" />
+
+    <ImageView
+        android:id="@+id/glide_image_gif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true" />
+
+    <Button
+        android:id="@+id/btn_img_onlydown"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:contentDescription="表示只会下载图片，而不会对图片进行加载"
+        android:gravity="left|center_vertical"
+        android:text="下载图片"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_img_cache"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:contentDescription="预加载,只缓存，不显示"
+        android:gravity="left|center_vertical"
+        android:text="缓存图片" />
+</LinearLayout>

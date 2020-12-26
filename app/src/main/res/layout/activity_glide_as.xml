@@ -1,0 +1,67 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_img_asbitmap"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:contentDescription=""
+            android:text="普通url图片"
+            android:textAllCaps="false" />
+
+        <ImageView
+            android:id="@+id/glide_image_asbitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
+
+        <Button
+            android:id="@+id/btn_img_asdrawable"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:contentDescription=""
+            android:text="本地file图片"
+            android:textAllCaps="false" />
+
+        <ImageView
+            android:id="@+id/glide_image_asdrawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
+        <Button
+            android:id="@+id/btn_img_asgif"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="gif图片"
+            android:textAllCaps="false" />
+
+        <ImageView
+            android:id="@+id/glide_image_asgif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
+        <Button
+            android:id="@+id/btn_img_asfile"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="asFile，无法展示"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+</ScrollView>

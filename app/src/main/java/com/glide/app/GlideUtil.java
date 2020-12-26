@@ -5,9 +5,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.MultiTransformation;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransitionOptions;
@@ -20,6 +22,10 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.glide.app.config.GlideApp;
 import com.glide.app.config.GlideRequest;
+import com.glide.app.config.GlideRequests;
+
+import java.io.File;
+import java.net.URL;
 
 /*
  */
@@ -45,7 +51,7 @@ public class GlideUtil {
     }
 
     /**
-     * 普通展示图片
+     * String 类型
      *
      * @param url
      * @param imageView
@@ -55,13 +61,87 @@ public class GlideUtil {
     }
 
     /**
-     * 加载资源图片
+     * 资源图片
      *
      * @param resId
      * @param imageView
      */
     public static void displayImage(Integer resId, ImageView imageView) {
         GlideApp.with(imageView).load(resId).into(imageView);
+    }
+
+    /**
+     * Uri类型
+     *
+     * @param uri
+     * @param imageView
+     */
+    public static void displayImage(Uri uri, ImageView imageView) {
+        GlideApp.with(imageView).load(uri).into(imageView);
+    }
+
+    /**
+     * URL类型
+     *
+     * @param url
+     * @param imageView
+     */
+    public static void displayImage(URL url, ImageView imageView) {
+        GlideApp.with(imageView).load(url).into(imageView);
+    }
+
+    /**
+     * File类型
+     *
+     * @param file
+     * @param imageView
+     */
+    public static void displayImage(File file, ImageView imageView) {
+        GlideApp.with(imageView).load(file).into(imageView);
+    }
+
+    /**
+     * Bitmap
+     *
+     * @param bitmap
+     * @param imageView
+     */
+    public static void displayImage(Bitmap bitmap, ImageView imageView) {
+        GlideApp.with(imageView).load(bitmap).into(imageView);
+    }
+
+    /**
+     * Drawable
+     *
+     * @param drawable
+     * @param imageView
+     */
+    public static void displayImage(Drawable drawable, ImageView imageView) {
+        GlideApp.with(imageView).load(drawable).into(imageView);
+    }
+
+    /**
+     * byte 数组
+     *
+     * @param bytes
+     * @param imageView
+     */
+    public static void displayImage(byte[] bytes, ImageView imageView) {
+        GlideApp.with(imageView).load(bytes).into(imageView);
+    }
+
+
+    /**
+     * asBitmap
+     * asGif
+     * asDrawable
+     * asFile
+     *
+     * @param url
+     * @param imageView
+     */
+    public static void displayImageAsX(String url, ImageView imageView) {
+        GlideApp.with(imageView).asBitmap().load(url).into(imageView);
     }
 
     /**

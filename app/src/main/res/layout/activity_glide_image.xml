@@ -10,11 +10,12 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_img_url"
+            android:id="@+id/btn_url"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:contentDescription=""
-            android:text="普通url图片"
+            android:gravity="left|center_vertical"
+            android:text="1,普通url图片,(String)"
             android:textAllCaps="false" />
 
         <ImageView
@@ -25,56 +26,60 @@
             android:adjustViewBounds="true" />
 
         <Button
-            android:id="@+id/btn_img_drawable"
+            android:id="@+id/btn_resid"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:contentDescription=""
-            android:text="本地资源id图片"
+            android:gravity="left|center_vertical"
+            android:text="2,本地资源id图片 (Integer)"
             android:textAllCaps="false" />
 
         <ImageView
-            android:id="@+id/glide_image_drawable"
+            android:id="@+id/glide_image_resid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:adjustViewBounds="true" />
 
         <Button
-            android:id="@+id/btn_img_assets"
+            android:id="@+id/btn_uri"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:contentDescription=""
-            android:text="本地资源assets图片"
+            android:gravity="left|center_vertical"
+            android:text="3,Uri"
             android:textAllCaps="false" />
 
         <ImageView
-            android:id="@+id/glide_image_assets"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true" />
-        <Button
-            android:id="@+id/btn_img_raw"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:contentDescription=""
-            android:text="本地资源raw图片"
-            android:textAllCaps="false" />
-
-        <ImageView
-            android:id="@+id/glide_image_raw"
+            android:id="@+id/glide_image_uri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:adjustViewBounds="true" />
 
-
         <Button
-            android:id="@+id/btn_img_file"
+            android:id="@+id/btn_URL"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:contentDescription=""
-            android:text="本地file图片"
+            android:gravity="left|center_vertical"
+            android:text="4,URL"
+            android:textAllCaps="false" />
+
+        <ImageView
+            android:id="@+id/glide_image_URL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
+        <Button
+            android:id="@+id/btn_file"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:contentDescription=""
+            android:gravity="left|center_vertical"
+            android:text="5,本地file图片"
             android:textAllCaps="false" />
 
         <ImageView
@@ -85,47 +90,53 @@
             android:adjustViewBounds="true" />
 
         <Button
-            android:id="@+id/btn_img_display"
+            android:id="@+id/btn_bitmap"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="展示图片（带监听）"
+            android:contentDescription=""
+            android:gravity="left|center_vertical"
+            android:text="6,Bitmap"
             android:textAllCaps="false" />
 
         <ImageView
-            android:id="@+id/glide_image_display"
+            android:id="@+id/glide_image_bitmap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:adjustViewBounds="true" />
 
         <Button
-            android:id="@+id/btn_img_gif"
+            android:id="@+id/btn_drawable"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="展示图片（gif）"
+            android:contentDescription=""
+            android:gravity="left|center_vertical"
+            android:text="7,Drawable"
             android:textAllCaps="false" />
 
         <ImageView
-            android:id="@+id/glide_image_gif"
+            android:id="@+id/glide_image_drawable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:adjustViewBounds="true" />
 
         <Button
-            android:id="@+id/btn_img_onlydown"
+            android:id="@+id/btn_bytearray"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:contentDescription="表示只会下载图片，而不会对图片进行加载"
-            android:text="下载图片"
+            android:contentDescription=""
+            android:gravity="left|center_vertical"
+            android:text="8,byte array"
             android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/btn_img_cache"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:contentDescription="预加载,只缓存，不显示"
-            android:text="缓存图片" />
+        <ImageView
+            android:id="@+id/glide_image_bytearray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
 
     </LinearLayout>
 
