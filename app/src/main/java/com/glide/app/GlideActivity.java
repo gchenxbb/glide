@@ -68,11 +68,12 @@ public class GlideActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_glide_image);
 
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this, PERMISSIONS_STORAGE, REQUEST_PERMISSION_CODE);
-            }
-        }
+        //将加载的File文件图片放在Android/包名/路径下，注释以下代码
+//        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+//            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+//                ActivityCompat.requestPermissions(this, PERMISSIONS_STORAGE, REQUEST_PERMISSION_CODE);
+//            }
+//        }
 
         initView();
     }
@@ -142,7 +143,9 @@ public class GlideActivity extends Activity implements View.OnClickListener {
                 break;
             //File
             case R.id.btn_file:
-                String filePath = Environment.getExternalStorageDirectory().getPath() + "/IMG_20201011_143239.jpg";
+//                String filePath = Environment.getExternalStorageDirectory().getPath() + "/IMG_20201011_143239.jpg";
+                String filePath = getExternalCacheDir() + "/IMG_20201011_143239.jpg";
+
                 File file = new File(filePath);
                 if (file.exists()) {
                     Log.i(TAG, "文件存在：");
