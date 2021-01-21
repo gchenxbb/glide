@@ -78,7 +78,7 @@ public class GlideActivity extends Activity implements View.OnClickListener {
         initView();
     }
 
-    protected void initView() {
+    void initView() {
         btnUrl = findViewById(R.id.btn_url);
         btnResId = findViewById(R.id.btn_resid);
         btnUri = findViewById(R.id.btn_uri);

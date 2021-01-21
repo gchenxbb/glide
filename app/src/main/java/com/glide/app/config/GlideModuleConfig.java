@@ -8,6 +8,7 @@ import com.bumptech.glide.GlideBuilder;
 import com.bumptech.glide.Registry;
 import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.load.engine.cache.ExternalCacheDiskCacheFactory;
+import com.bumptech.glide.load.engine.cache.ExternalPreferredCacheDiskCacheFactory;
 import com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory;
 import com.bumptech.glide.module.AppGlideModule;
 import com.bumptech.glide.request.target.ViewTarget;
@@ -35,12 +36,9 @@ public class GlideModuleConfig extends AppGlideModule {
         //builder.setMemoryCache(new LruResourceCache(memorySize));
         //builder.setBitmapPool(new LruBitmapPool(memorySize));
 
-        // 定义图片缓存大小和位置
-        if (Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {
-            builder.setDiskCache(new ExternalCacheDiskCacheFactory(context, IMAGE_DIR_NAME, diskSize));
-        } else {
-            builder.setDiskCache(new InternalCacheDiskCacheFactory(context, IMAGE_DIR_NAME, smallDiskSize));
-        }
+        // 定义图片缓存大小和位置，依然是外部存储
+        builder.setDiskCache(new ExternalPreferredCacheDiskCacheFactory(context, IMAGE_DIR_NAME, diskSize));
+
         ViewTarget.setTagId(R.id.glide_tag_id);
 
         //更改配置
